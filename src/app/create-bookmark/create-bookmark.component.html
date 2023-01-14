@@ -1,0 +1,26 @@
+<div>
+    <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6" style="padding: 50px;">
+        <h2>Create Bookmark</h2>
+
+    <form [formGroup]="bookmarkForm" (ngSubmit)="createBookmark()">
+        <div class="form-group" style="padding: 20px;">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" name="title" formControlName="title" id="title"  aria-describedby="emailHelp" placeholder="Title">
+        </div>
+        <div style="color: red;padding-left: 22px" *ngIf="(this.bookmarkForm.get('title')?.touched || this.bookmarkForm.get('title')?.dirty)  && this.bookmarkForm.get('acno')?.errors" class="error">Add Title</div>
+        <div class="form-group" style="padding: 20px;">
+          <label for="url">URL</label>
+          <input type="url" class="form-control" name="url" formControlName="url" id="url" placeholder="URL">
+        </div>
+        <div style="color: red;padding-left: 22px" *ngIf=" submit && (this.bookmarkForm.get('url')?.touched || this.bookmarkForm.get('url')?.dirty) && this.bookmarkForm.get('url')?.errors" class="error">*Invalid URL</div>
+        <div style="padding: 20px;">
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Create Bookmark</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3"></div>
+
+</div>
+</div>

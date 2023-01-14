@@ -1,0 +1,13 @@
+<div class="container">
+   <div class="nav-1">
+    <h2><img style="width: 35px;" src="assets/img.png" alt="">Bookmarks</h2>
+    <span ><a routerLink="/create">Create New</a> </span>
+   </div>
+   <div style="padding-left:50px ;">
+   <div *ngFor = "let list of lists" class="list" >
+    <h3 style="font-weight: bold;" id="heading">{{list.title}}</h3>
+    <label id="url"><a [href]="list.url">{{list.url}}</a></label> <br>
+    <span id="name">{{list.date | date: 'dd/MM/yyyy'}}</span>
+   </div>
+</div>
+</div>

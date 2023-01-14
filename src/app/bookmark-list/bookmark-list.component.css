@@ -1,0 +1,13 @@
+.nav-1 {
+    margin: 50px
+   
+}
+.nav-1 a {
+    text-decoration: none;
+    color: brown;
+}
+.list {
+    font-family: ui-rounded;
+    padding-bottom: 30px;
+    font-size: 27px;
+}
